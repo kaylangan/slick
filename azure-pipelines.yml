@@ -19,8 +19,7 @@ steps:
   inputs:
     versionSpec: $(NODE_VERSION)
   displayName: 'Install Node.js'
-steps:
-- task: 
+ 
 - script: |
     cat -e -t -v Makefile
     npm install component
