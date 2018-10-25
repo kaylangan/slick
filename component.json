@@ -7,7 +7,6 @@
     "dependencies": {
         "component/jquery": "*"
     },
-    "development": {},
     "scripts": ["slick.js"],
     "styles": ["slick.css"]
     }
