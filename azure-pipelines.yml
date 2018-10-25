@@ -10,6 +10,6 @@ steps:
 - script: |
     cat -e -t -v Makefile
     npm install component
-    npm run component
+    npm install jquery
     make
   displayName: 'Script'
