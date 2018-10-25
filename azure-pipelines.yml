@@ -7,5 +7,7 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
-- script: make -C Makefile
+- script: |
+    cat -e -t -v Makefile
+    make
   displayName: 'Script'
