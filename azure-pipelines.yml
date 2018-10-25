@@ -5,8 +5,22 @@
 
 pool:
   vmImage: 'Ubuntu 16.04'
+strategy:
+  matrix:
+    Node8:
+      NODE_VERSION: '8.x'
+    Node9:
+      NODE_VERSION: '9.x'
+    Node10:
+      NODE_VERSION: '10.x'                  
 
 steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: $(NODE_VERSION)
+  displayName: 'Install Node.js'
+steps:
+- task: 
 - script: |
     cat -e -t -v Makefile
     npm install component
