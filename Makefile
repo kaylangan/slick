@@ -1,5 +1,5 @@
 
-build: components slick.js slick.css
+build: components slick/slick.js slick/slick.css
 	component build --dev
 
 components: component.json
