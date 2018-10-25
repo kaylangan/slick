@@ -22,5 +22,7 @@ steps:
 
 - script: |
     npm install
+    npm install jquery
+    npm install -g component
     make
   displayName: 'Script'
