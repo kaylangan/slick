@@ -15,14 +15,9 @@ strategy:
       NODE_VERSION: '10.x'                  
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: $(NODE_VERSION)
-  displayName: 'Install Node.js'
- 
+
 - script: |
-    cat -e -t -v Makefile
-    npm install component
     npm install jquery
+    npm install component
     make
   displayName: 'Script'
