@@ -1,0 +1,27 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+pool:
+  vmImage: 'Ubuntu 16.04'
+strategy:
+  matrix:
+    Node8:
+      NODE_VERSION: '8.x'
+    Node9:
+      NODE_VERSION: '9.x'
+    Node10:
+      NODE_VERSION: '10.x'                  
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: $(NODE_VERSION)
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install jquery
+    npm install -g component
+    make
+  displayName: 'Script'
