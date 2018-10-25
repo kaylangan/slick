@@ -22,6 +22,6 @@ steps:
 
 - script: |
     npm install jquery
-    sudo npm install -g component
+    npm install -g component
     make
   displayName: 'Script'
