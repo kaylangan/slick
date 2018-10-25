@@ -21,7 +21,6 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install
     npm install jquery
     npm install -g component
     make
