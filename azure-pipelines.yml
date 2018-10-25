@@ -9,6 +9,6 @@ pool:
 steps:
 - script: |
     cat -e -t -v Makefile
-    npm install component
+    sudo npm install -g component
     make
   displayName: 'Script'
